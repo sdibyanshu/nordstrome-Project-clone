@@ -1,0 +1,296 @@
+
+        #container {
+            width: 100%;
+            border: 1px solid red;
+            height: 2500px;
+            margin: auto;
+        }
+
+        #top {
+            width: 100%;
+            height: 40px;
+            border: 1px solid transparent;
+            background-color: rgb(251, 228, 70);
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 14px;
+        }
+
+
+        a {
+            color: black;
+        }
+
+
+        #navbar h1 {
+            font-size: 33px;
+            font-family: sans-serif;
+            margin-top: 33px;
+            font-weight: normal;
+
+        }
+
+        #navbar {
+            width: 100%;
+            height: 100px;
+            border: 1px solid transparent;
+            display: flex;
+
+        }
+
+        #navbar div {
+            border: 1px solid transparent;
+
+            height: 100%;
+
+        }
+
+        #navbar div:nth-child(1) {
+            width: 20%;
+        }
+
+        #navbar div:nth-child(2) {
+            width: 60%;
+
+        }
+
+        #navbar div:nth-child(2)>input {
+            width: 96%;
+            height: 50px;
+            margin-top: 24px;
+            color: rgb(187, 187, 187);
+            margin-left: 34px;
+            border: 1px solid grey;
+            ;
+
+
+        }
+
+        #navbar div:nth-child(3) {
+            width: 14%;
+
+        }
+
+        #navbar div:nth-child(3) button {
+            margin-top: 44px;
+            margin-left: 90px;
+            border: none;
+            background-color: transparent;
+
+            font-size: 16px;
+
+        }
+
+        #navbar div:nth-child(4) {
+            width: 6%;
+        }
+
+        #navbar div:nth-child(4) button {
+
+            margin-top: 25px;
+            margin-right: 10px;
+            border: none;
+            padding: 0px;
+            width: 50px;
+
+        }
+
+        #navbar div:nth-child(4)>button>img {
+            width: 100%;
+
+
+
+        }
+
+        hr {
+            width: 95%;
+
+        }
+
+        #sections {
+            margin-top: 26px;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        #sections div:hover {
+            color: brown;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        h2 {
+            color: rgb(87, 87, 87);
+            text-align: center;
+        }
+
+        h2+button {
+            padding: 10px;
+            padding-left: 40px;
+            padding-right: 40px;
+            background-color: transparent;
+            border: 1px solid grey;
+            margin-left: 520px;
+            
+
+        }
+        h2+button>a{
+            text-decoration: none;
+        }
+
+        h2+button:hover {
+            background-color: rgb(223, 217, 217);
+           
+        }
+
+        #bigimgdiv {
+
+            height: 500px;
+            width: 96%;
+            margin: auto;
+            margin-top: 50px;
+            display: flex;
+
+        }
+
+        #bigimgdiv>div:first-child {
+            width: 65%;
+        }
+
+        #bigimgdiv>div:first-child>img {
+            width: 100%;
+            height: 100%;
+        }
+
+        #bigimgdiv>div:last-child {
+            width: 35%;
+            background-color: rgb(250, 228, 69);
+        }
+
+        #bigimgdiv>div:last-child>img {
+            width: 100%;
+            height: 100%;
+        }
+
+
+        h3 {
+            font-size: 24px;
+            font-family: sans-serif;
+            margin-top: 20px;
+            text-align: center;
+
+
+        }
+
+        #relprobox {
+            border: 1px solid transparent;
+            width: 98%;
+            height: 500px;
+            margin: auto;
+            display: flex;
+        }
+
+        #relprobox>div {
+            border: 1px solid rgb(239, 239, 239);
+            width: 23%;
+            height: 95%;
+            margin: auto;
+            text-align: center;
+            line-height: 9px;
+            font-family: sans-serif;
+        }
+
+        #relprobox>div>div {
+            width: 70%;
+            height: 48%;
+            border: 1px solid rgb(239, 239, 239);
+            margin: auto;
+            margin-top: 16px;
+        }
+
+        #relprobox>div>div>img {
+            width: 100%;
+            height: 100%;
+        }
+
+        #relprobox>div>div+p {
+            color: black;
+            font-size: 18px;
+            font-family: sans-serif;
+            font-weight: bold;
+        }
+
+        .ptwo {
+            font-size: 17px;
+        }
+
+        .pthree {
+            color: gray;
+            font-size: 14px;
+        }
+
+        .pfour {
+            color: black;
+            font-size: 19px;
+        }
+
+        .relprbutton {
+            color: black;
+            background-color: rgb(251, 228, 70);
+            border-color: transparent;
+            border-width: 10px;
+            font-size: 17px;
+            border-radius: 5px;
+            width: 70%;
+        }
+
+        .relprbutton:hover ::shadow {
+            background-color: rgb(251, 228, 70)
+        }
+
+        #relatedcat {
+            width: 97%;
+            display: grid;
+            border: 1px solid tra;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 150px);
+            gap: 16px 17px;
+            margin: auto;
+        }
+
+        #relatedcat>div {
+            border: 1px solid transparent;
+            display: flex;
+            box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+            border-radius: 2px;
+        }
+
+        #relatedcat>div>div:first-child {
+            border: 1px solid transparent;
+            width: 39%;
+            height: 100%;
+        }
+
+        #relatedcat>div>div:last-child {
+            border: 1px solid transparent;
+            width: 58%;
+            height: 100%;
+            margin: auto;
+        }
+
+        #relatedcat>div>div:first-child>img {
+            width: 100%;
+            height: 100%;
+        }
+
+        #relatedcat>div>div:last-child>p {
+            color: black;
+            font-size: 18px;
+            font-weight: bold;
+            font-family: sans-serif;
+            margin-left: 15px;
+            margin-top: 50px;
+        }
+
+      
+    
