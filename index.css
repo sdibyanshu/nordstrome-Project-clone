@@ -1,8 +1,8 @@
 
         #container {
             width: 100%;
-            border: 1px solid red;
-            height: 2500px;
+            border: 1px solid transparent;
+            height: 4000px;
             margin: auto;
         }
 
@@ -14,6 +14,10 @@
             text-align: center;
             font-family: Arial, Helvetica, sans-serif;
             font-size: 14px;
+            /* position: -webkit-sticky;
+	        position: sticky; 
+	        top: 0; */
+            
         }
 
 
@@ -35,6 +39,7 @@
             height: 100px;
             border: 1px solid transparent;
             display: flex;
+           
 
         }
 
@@ -113,11 +118,16 @@
             justify-content: space-around;
         }
 
-        #sections div:hover {
-            color: brown;
+        #sections div a:hover {
+            color: black;
             text-decoration: underline;
             cursor: pointer;
-        }
+            padding: 8px;
+            background-color:#FCE4EC;
+         
+         }
+       
+         
 
         h2 {
             color: rgb(87, 87, 87);
