@@ -21,7 +21,9 @@ let arr = JSON.parse(localStorage.getItem("userData"));
 
         // console.log(el)
 
-        if (el.personEmail == email1 && el.personPass == pass1) {
+       if (el.personEmail == email1 && el.personPass == pass1) {
+            window.location.href="index.html"
+          
           flag = true;
         }
       })
@@ -29,9 +31,8 @@ let arr = JSON.parse(localStorage.getItem("userData"));
         alert("Login succesful")
       }
       else {
-        alert("Never give up")
+        alert("Incorrect Data")
       }
     }
 
   }
-    // console.log(email1, pass1

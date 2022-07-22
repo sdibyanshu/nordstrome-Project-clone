@@ -2,51 +2,98 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        #container {
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="index.css">
 
-            display: grid;
-            width: 90%;
-            
-            grid-template-columns: repeat(4, 1fr);
-            grid-template-rows: repeat(5, 350px);
-            gap: 20px;
-            margin: auto;
+  <style>
+    #container {
 
-        }
+      display: grid;
+      width: 90%;
 
-        #container>div {
-            text-align: center;
-            border: 1px solid transparent;
-            line-height: 9px;
-            border-radius: 8px;
-            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(5, 350px);
+      gap: 20px;
+      margin: auto;
 
-        }
-        h2{
-            font-size: 14px;
-            line-height: 18px;
-        }
-        div img{
-            width: 100%;
-            height: 50%;
-        }
-    </style>
+    }
+
+    #container>div {
+      text-align: center;
+      border: 1px solid transparent;
+      line-height: 9px;
+      border-radius: 8px;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+    }
+
+    h2 {
+      font-size: 14px;
+      line-height: 18px;
+    }
+    h3 {
+      font-size: 24px;
+      color: rgb(70, 70, 70);
+     
+    }
+
+    div img {
+      width: 100%;
+      height: 50%;
+    }
+  </style>
 </head>
 
 <body>
-    <div id="container"></div>
+  <div id="top">
+    </p> <strong>Get a $40 Bonus Note! An exclusive offer for new Nordstrom credit
+      cardmembers</strong>—Restrictions apply. <a href="LearnMore.html">Apply Now</a> </p>
+  </div>
+  <div id="navbar">
+    <div>
+      <h1> <a href="index.html">NORDSTROM</a></h1>
+    </div>
+    <div>
+      <input type="text" placeholder="Search for products and brand">
+    </div>
+    <div>
+      <button> <a id="sign in" href="signup.html">Sign in </a> </button>
+    </div>
+    <div>
+      <button> <img
+          src="https://static.vecteezy.com/system/resources/thumbnails/002/205/981/small_2x/lock-icon-free-vector.jpg"
+          alt=""><a href="cart.html"> Cart</a></button>
+    </div>
+
+  </div>
+  <hr>
+  <div id="sections">
+    <div>Anniversary sell </div>
+    <div><a href="mens.html">Mens </a> </div>
+    <div><a href="womens.html">Womens </a> </div>
+    <div>Kids</div>
+    <div>Younge Adult</div>
+    <div>Activewear</div>
+    <div>Home</div>
+    <div>Beauty</div>
+    <div>Designer</div>
+    <div>Gifts</div>
+    <div>Sale</div>
+    <div>Brands</div>
+  </div>
+
+  <h3> Womens Section</h3>
+  <div id="container"></div>
 </body>
 
 </html>
 
 
 <script>
-    let womensData = [
+  let womensData = [
     {
       image_url:
         "https://content.shop4reebok.com/static/Product-GL2296/reebok_GL2296_1.jpg.plp",
@@ -504,34 +551,36 @@
     },
   ];
 
-    womensData.forEach(function (elem) {
+  womensData.forEach(function (elem) {
 
-        //  console.log(elem.image_url);
+    //  console.log(elem.image_url);
 
-        let box = document.createElement("div")
-       
-
-        let image = document.createElement("img")
-        image.setAttribute("src", elem.image_url)
-
-        let Mname = document.createElement("h2")
-        Mname.innerText = elem.name
-
-        //   image.setAttribute("src", elem.h2)
-        let prc = document.createElement("p")
-        prc.innerText = elem.price
+    let box = document.createElement("div")
 
 
-        let btn = document.createElement("button")
+    let image = document.createElement("img")
+    image.setAttribute("src", elem.image_url)
 
-         btn.innerText = "Add to cart"
+    let Mname = document.createElement("h2")
+    Mname.innerText = elem.name
+
+    //   image.setAttribute("src", elem.h2)
+    let prc = document.createElement("p")
+    prc.innerText = elem.price
 
 
-        box.append(image,Mname,prc,btn)
-        
-        document.querySelector("#container").append(box)
+    let btn = document.createElement("button")
+
+    btn.innerText = "Add to cart"
 
 
-    })
+    box.append(image, Mname, prc, btn)
 
+    document.querySelector("#container").append(box)
+
+
+  })
+
+
+         
 </script>
