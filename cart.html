@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart Page</title>
+    <link rel="stylesheet" href="commonStyles.css" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgb(248, 246, 246);
+        }
+
+        /* Navbar related css */
+
+        #links {
+            display: flex;
+            justify-content: space-evenly;
+            padding: 1%;
+            box-shadow: 2px 2px 5px 5px rgb(235, 235, 235);
+        }
+
+        #links>div {
+            display: flex;
+            list-style: none;
+        }
+
+        #links a {
+            text-decoration: none;
+            color: black;
+            font-size: 30px;
+            font-family: sans-serif;
+        }
+
+        table,
+        td,
+        th {
+            border: 1px solid #ddd;
+            text-align: center;
+            font-size: 16px;
+            font-family: sans-serif;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 70%;
+
+            margin: auto;
+            margin-top: 50px;
+        }
+
+        th {
+            padding: 15px;
+
+        }
+
+        td {
+            padding: 15px;
+            height: 100px;
+        }
+
+        tr>th {
+            background-color: #c8a600;
+            border-radius: 5px;
+            color: black;
+            text-align: center;
+        }
+
+        #toptr {
+            background-color: #c8a600;
+            font-family: sans-serif;
+            width: 90%;
+            font-size: 20px;
+
+        }
+
+        h2 {
+            font-size: 40px;
+            text-align: center;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        #links img {
+            width: 200px;
+            height: 140px;
+        }
+
+        h3 {
+            text-align: end;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 22px;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="links">
+        <div> <a href="index.html"> > HomePage < </a>
+        </div>
+        <h2>-Total Cart Section- </h2>
+        <td><img src="https://t4.ftcdn.net/jpg/02/82/82/77/360_F_282827775_drdDK8oeZXCLaEk9BSRrsqDx4K6hgY99.jpg" alt="">
+        </td>
+      
+    </div>
+    <h3><a href="shipping.html">Go To Shipping Page ></a></h3>
+    <main>
+
+        <table>
+            <thead>
+                <div>
+                    <tr id="toptr">
+                        <td>
+                            <h1>Total Price :- <span id="totvalue"> 0 </span></h1>
+                        </td>
+                        <td>
+                            <h1>Quantity :- <span id="totquantity"> 0 </span></h1>
+                        </td>
+                    </tr>
+                </div>
+
+            </thead>
+
+        </table>
+
+        <table>
+
+            <thead>
+                <h1 id="totvalue"> </h1>
+
+
+                <tr>
+                    <th>Product Name</th>
+                    <th>Product Image</th>
+                    <th>Price</th>
+                    <th>Remove from Cart</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </main>
+</body>
+<script>
+
+    let addCartData = JSON.parse(localStorage.getItem("cartdata")) || [];
+
+  
+    let totalPrice = document.getElementById("totvalue")
+    let totalQuant = document.getElementById("totquantity")
+
+    displayTable(addCartData)
+    function displayTable(addCartData) {
+        
+        document.querySelector("tbody").innerHTML = "";
+
+        let total = 0;
+        let count = 0;
+
+        addCartData.forEach(function (elem, index) {
+            total = total + Number(elem.price)
+            count++;
+
+            let tr = document.createElement("tr")
+
+            let td1 = document.createElement("td")
+            td1.innerText = elem.name
+
+            let td2 = document.createElement("img")
+            td2.setAttribute("src", elem.image_url)
+
+            let td3 = document.createElement("td")
+            td3.innerText = elem.price
+            td3.style.backgroundColor = "#00e676"
+
+            let td4 = document.createElement("td")
+            td4.innerText = "Remove"
+            td4.style.color = "black"
+            td4.style.backgroundColor = "#ef5350"
+            td4.addEventListener("click", function () {
+             
+                deleteRow(elem,index)
+
+            })
+
+            tr.append(td1, td2, td3, td4)
+            document.querySelector("tbody").append(tr)
+
+        })
+        totalPrice.innerText = total
+        totalQuant.innerText = count    
+    }
+
+    function deleteRow(elem,index){
+  
+    addCartData.splice(index,1);
+    localStorage.setItem("cartdata",JSON.stringify(addCartData));
+    displayTable(addCartData);
+    }
+</script>
+
+</html>
+
+
+
+
+
+
+
