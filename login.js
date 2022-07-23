@@ -22,7 +22,7 @@ let arr = JSON.parse(localStorage.getItem("userData"));
         // console.log(el)
 
        if (el.personEmail == email1 && el.personPass == pass1) {
-            window.location.href="index.html"
+        window.location.href="index.html";
           
           flag = true;
         }
