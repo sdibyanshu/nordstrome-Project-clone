@@ -8,22 +8,16 @@
     <title>Document</title>
     <style>
         body{
-            background-color: #bcaaa4;
+            background-color: rgb(248, 246, 246);
         }
-        #Humhaidon {
-            width: 100%;
-            height: 500px;
-            background-color: rgb(228, 220, 214);
-           
-        }
+       
 
-    
         #totalpage {
             border: 1px solid gray;
             height: 750px;
-            width: 500px;
+            width: 700px;
             margin: auto;
-            background-color:#c8a600;
+            background-color:#fff8e1;
             border-radius: 6px;
 
         }
@@ -40,7 +34,8 @@
 
         #totalpage>div {
             display: flex;
-            justify-content: space-between;
+            justify-content:center;
+           
         }
 
         #coupon {
@@ -64,13 +59,13 @@
         .adress+button {
             width: 80%;
             height: 40px;
-            margin-left: 30px;
-            border: 1px solid green;
-            background-color: teal;
-           
+            margin-left: 80px;
+            border: none;
+            background-color:grey;
+            border-radius: 8px;  
             margin-top: 10px;
             font-size: 20px;
-        color: black;
+            color: black;
         }
 
         .adress>input {
@@ -87,7 +82,6 @@
 
             width: 90%;
             margin: 6px;
-
         }
 
         .remove {
@@ -122,6 +116,8 @@
             font-family: sans-serif;
             font-size: 25px;
             color: black;
+            line-height: 2px;
+            
         }
     </style>
 </head>
@@ -135,12 +131,12 @@
             <h2>Order Details</h2>
             <div class="line"><span></span></div>
             <div>
-                <h4>No.of products</h4>
-                <h4 id="Nummber"></h4>
+                <h3>No.of Products :-</h3>
+                <h3 id="Nummber"></h3>
             </div>
             <div>
-                <h4>Total price</h4>
-                <h4 id="Total"></h4>
+                <h3>Total Price :-</h3>
+                <h3 id="Total"></h3>
             </div>
             <form>
                 <input type="text" placeholder="Enter Coupon Code" id="coupon">
@@ -155,13 +151,13 @@
             <input type="email" placeholder="Email" class="shiped">
             <input type="number" placeholder="Mobile" class="shiped">
             <div class="adress">
-                <input type="text" placeholder="Street">
-                <input type="text" placeholder="City">
+                <input type="text" placeholder="Street" class="shiped">
+                <input type="text" placeholder="City" class="shiped">
 
             </div>
             <div class="adress">
-                <input type="text" placeholder="State">
-                <input type="number" placeholder="Pincode">
+                <input type="text" placeholder="State" id="shiped">
+                <input type="number" placeholder="Pincode"class="shiped">
             </div>
             <button><a href="Payment.html">Place order</a></button>
 
@@ -169,5 +165,67 @@
     </div>
 
 </body>
+<script>
+      
+      var datafromCart=JSON.parse(localStorage.getItem("cartdata"))
+//   console.log(datafromprod)
+    var total= datafromCart.reduce(function(sum,elem,index,arr){
+    return sum + Number(elem.price)
+  },0)
+  var free=document.querySelector("#coupon").value;
+    var length=datafromCart.length;
+    
+    document.querySelector("#submit").addEventListener("click",myfunction)
+        
+    function myfunction(event){
+        event.preventDefault()
+        if(free ="Masai@30"){
+          total=(total*70/100)
+          document.querySelector("#Total").innerText=total;
+        }
+    }
+
+  document.querySelector("#Nummber").innerText=length;
+  document.querySelector("#Total").innerText=total;
+  
+  
+    datafromprod.map(function(elem){
+    var LOL=document.createElement("div")
+     LOL.setAttribute("id","bean")
+    
+    var pic=document.createElement("img")
+    pic.src=elem.image_url
+    pic.setAttribute("class","find")
+    
+    var Name=document.createElement("p")
+   Name.innerText=elem.name;
+
+    var COmp=document.createElement("p")
+    COmp.innerText=elem.company
+    COmp.style.marginTop="-10px"
+    
+    var daam=document.createElement("h4")
+    daam.innerText=elem.price
+     daam.style.marginTop="-10px"
+   
+     var flop=document.createElement("button")
+    flop.innerText="Remove"
+    flop.setAttribute("class","remove")
+    flop.addEventListener("click",function(){
+        callme(elem)
+    })
+    
+    LOL.append(pic,Name,COmp,daam,flop)
+    document.querySelector("#Humhaidon").append(LOL)
+
+   })
+  function callme(elem,index){
+    datafromprod.splice(index,1)
+   localStorage.setItem("cart",JSON.stringify(datafromprod))
+    window.location.reload()
+  
+  }
+
+</script>
 
 </html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .pillme {
+            width: 100%;
+        }
+
+        #box {
+            position: absolute;
+
+          
+            padding-left: 10px;
+            font-size: 17px;
+           border-radius: 5px;
+            width: 350px;
+            margin-left: 500px;
+            margin-top: -400px;
+           background-color:#e8eaf6;
+            height: 180px;
+            box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+
+        }
+
+
+        h2 {
+            text-align: center;
+            color: blue;
+        }
+
+        #otp {
+            margin-left: 90px;
+            height: 35px;
+        }
+
+        #confirm {
+            margin-left: 90px;
+            height: 35px;
+            width: 170px;
+            margin-top: 10px;
+            color: white;
+            background-color: cornflowerblue;
+        }
+
+        a {
+            text-decoration: none;
+            background-color: rgb(46, 49, 146);
+            color: white;
+        }
+        img{
+            margin-bottom: 40px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <form>
+
+        </div>
+
+        <div class="hooej" ; style="position:relative;">
+            <img style=" width: 100%;
+        height: 550px" ;
+                src="https://img.freepik.com/premium-vector/3d-rendering-concept-security-system_165488-4679.jpg?w=2000">
+            <form>
+                <div id="box">
+                    <h2>OTP Confirm</h2>
+                    <input id="otp" placeholder="Type Your Otp here" type="number">
+                    <input id="confirm" type="submit" value="Confirm">
+                </div>
+
+            </form>
+        </div>
+
+
+
+
+
+
+</body>
+<script>
+
+    document.querySelector("form").addEventListener("submit", clear)
+    function clear() {
+        event.preventDefault()
+        var Otp = document.getElementById("otp").value;
+        if (Otp > 111111 || otp < 999999) {
+            alert("Payment Done Succesfully")
+            window.location.href = "index.html";
+
+        }
+    }
+
+</script>
+
+</html>

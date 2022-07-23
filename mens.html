@@ -7,90 +7,92 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="index.css">
-   
+
     <style>
         #container {
 
-display: grid;
-width: 90%;
+            display: grid;
+            width: 90%;
+            height: auto;
 
-grid-template-columns: repeat(4, 1fr);
-grid-template-rows: repeat(5, 350px);
-gap: 20px;
-margin: auto;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(5, 300px);
+            gap: 20px;
+            margin: auto;
 
-}
+        }
 
-#container>div {
-text-align: center;
-border: 1px solid transparent;
-line-height: 9px;
-border-radius: 8px;
-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        #container>div {
+            text-align: center;
+            border: 1px solid transparent;
+            line-height: 9px;
+            border-radius: 8px;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 
-}
+        }
 
-h2 {
-font-size: 14px;
-line-height: 18px;
-}
-h3 {
-      font-size: 24px;
-      color: rgb(70, 70, 70);
-     
-    }
+        h2 {
+            font-size: 14px;
+            line-height: 18px;
+        }
 
-div img {
-width: 100%;
-height: 50%;
-}
+        h3 {
+            font-size: 24px;
+            color: rgb(70, 70, 70);
+
+        }
+
+        div img {
+            width: 100%;
+            height: 50%;
+        }
     </style>
 </head>
 
 <body>
-      
+
     <div id="top">
-    </p> <strong>Get a $40 Bonus Note! An exclusive offer for new Nordstrom credit
-        cardmembers</strong>—Restrictions apply. <a href="LearnMore.html">Apply Now</a> </p>
-</div>
-<div id="navbar">
-    <div>
-        <h1> <a href="index.html">NORDSTROM</a></h1>
+        </p> <strong>Get a $40 Bonus Note! An exclusive offer for new Nordstrom credit
+            cardmembers</strong>—Restrictions apply. <a href="LearnMore.html">Apply Now</a> </p>
     </div>
-    <div>
-        <input type="text" placeholder="Search for products and brand">
+    <div id="navbar">
+        <div>
+            <h1> <a href="index.html">NORDSTROM</a></h1>
+        </div>
+        <div>
+            <input type="text" placeholder="Search for products and brand">
+        </div>
+        <div>
+            <button> <a id="sign in" href="signup.html">Sign in </a> </button>
+        </div>
+        <div>
+            <button> <img
+                    src="https://static.vecteezy.com/system/resources/thumbnails/002/205/981/small_2x/lock-icon-free-vector.jpg"
+                    alt=""><a href="cart.html"> Cart</a></button>
+        </div>
+
     </div>
-    <div>
-        <button> <a id="sign in" href="signup.html">Sign in </a> </button>
-    </div>
-    <div>
-        <button> <img
-                src="https://static.vecteezy.com/system/resources/thumbnails/002/205/981/small_2x/lock-icon-free-vector.jpg"
-                alt=""><a href="cart.html"> Cart</a></button>
+    <hr>
+    <div id="sections">
+        <div>Anniversary sell </div>
+        <div><a href="mens.html">Mens </a> </div>
+        <div><a href="womens.html">Womens </a> </div>
+        <div>Kids</div>
+        <div>Younge Adult</div>
+        <div>Activewear</div>
+        <div>Home</div>
+        <div>Beauty</div>
+        <div>Designer</div>
+        <div>Gifts</div>
+        <div>Sale</div>
+        <div>Brands</div>
     </div>
 
-</div>
-<hr>
-<div id="sections">
-    <div>Anniversary sell </div>
-    <div><a href="mens.html">Mens </a> </div> 
-    <div><a href="womens.html">Womens </a> </div>
-    <div>Kids</div>
-    <div>Younge Adult</div>
-    <div>Activewear</div>
-    <div>Home</div>
-    <div>Beauty</div>
-    <div>Designer</div>
-    <div>Gifts</div>
-    <div>Sale</div>
-    <div>Brands</div>
-</div>
-
-<h3> Mens Section</h3>
+    <h3> Mens Section</h3>
 
     <div id="container">
-          
-      
+
+
     </div>
 </body>
 
@@ -98,7 +100,7 @@ height: 50%;
 
 
 <script>
-    
+
     let mensData = [
         {
             image_url:
@@ -354,47 +356,47 @@ height: 50%;
         },
     ];
 
-     let cartLs=JSON.parse(localStorage.getItem("cartdata"))||[];
+    let cartLs = JSON.parse(localStorage.getItem("cartdata")) || [];
 
-       display(mensData)
-       function display(mensData){
-  
-      mensData.forEach(function (elem) {
+    display(mensData)
+    function display(mensData) {
 
-        
-        //  console.log(elem.image_url);
-
-        let box = document.createElement("div")
+        mensData.forEach(function (elem) {
 
 
-        let image = document.createElement("img")
-        image.setAttribute("src", elem.image_url)
+            //  console.log(elem.image_url);
 
-        let Mname = document.createElement("h2")
-        Mname.innerText = elem.name
-
-        //   image.setAttribute("src", elem.h2)
-        let prc = document.createElement("p")
-        prc.innerText = elem.price
+            let box = document.createElement("div")
 
 
-        let btn = document.createElement("button")
+            let image = document.createElement("img")
+            image.setAttribute("src", elem.image_url)
 
-        btn.innerText = "Add to cart"
+            let Mname = document.createElement("h2")
+            Mname.innerText = elem.name
 
-        btn.addEventListener("click", function () {
-            hitme(elem)
+            //   image.setAttribute("src", elem.h2)
+            let prc = document.createElement("p")
+            prc.innerText = elem.price
+
+
+            let btn = document.createElement("button")
+
+            btn.innerText = "Add to cart"
+
+            btn.addEventListener("click", function () {
+                hitme(elem)
+            })
+
+
+            box.append(image, Mname, prc, btn)
+
+            document.querySelector("#container").append(box)
+
+
         })
 
-
-        box.append(image, Mname, prc, btn)
-
-        document.querySelector("#container").append(box)
-
-
-    })
-
-}
+    }
     function hitme(elem) {
         cartLs.push(elem);
         localStorage.setItem("cartdata", JSON.stringify(cartLs))

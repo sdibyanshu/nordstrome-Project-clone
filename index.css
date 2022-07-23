@@ -2,7 +2,7 @@
         #container {
             width: 100%;
             border: 1px solid transparent;
-            height: 4000px;
+            height: auto;
             margin: auto;
         }
 
@@ -45,7 +45,6 @@
 
         #navbar div {
             border: 1px solid transparent;
-
             height: 100%;
 
         }
@@ -66,7 +65,7 @@
             color: rgb(187, 187, 187);
             margin-left: 34px;
             border: 1px solid grey;
-            ;
+            
 
         }
 
@@ -80,7 +79,6 @@
             margin-left: 90px;
             border: none;
             background-color: transparent;
-
             font-size: 16px;
 
         }
@@ -102,8 +100,6 @@
         #navbar div:nth-child(4)>button>img {
             width: 100%;
 
-
-
         }
 
         #navbar img+a{
@@ -114,7 +110,7 @@
             
         }
         #navbar img+a:hover{
-            background-color:pink;
+            background-color:#FCE4EC;
             width: 150%;
             border-radius: 4px;
            
@@ -129,8 +125,7 @@
         hr {
             width: 95%;
 
-        }
-
+        }      
         #sections {
             margin-top: 26px;
             display: flex;
@@ -141,13 +136,10 @@
             color: black;
             text-decoration: underline;
             cursor: pointer;
-            padding: 8px;
+            /* padding: 8px; */
             background-color:#FCE4EC;
          
-         }
-       
-         
-
+         }      
         h2 {
             color: rgb(87, 87, 87);
             text-align: center;
@@ -322,4 +314,136 @@
         }
 
       
+         /* Bootom section  */
     
+        #Cooler2 {
+            height: auto;
+            width: 100%;
+            background-color: white;
+           
+        
+        }
+        
+        #navi {
+            background: #eeeeee;
+            border-top: solid 1px #fff;
+            border-bottom: solid 1px #e6e6e6;
+            display: flex;
+            height: auto;
+            box-sizing: border-box;
+            height: auto;
+        }
+        
+        .folow>img {
+            height: 30px;
+            margin-top: 10px;
+            background-color: #eeeeee;
+        }
+        
+        .folow {
+            display: flex;
+            font-family: arial;
+            font-weight: 400;
+            margin-bottom: 10px;
+            background: #eeeeee;
+        
+        }
+        
+        .folow>h3 {
+            font-weight: 400;
+            font-family: arial;
+            background: #eeeeee;
+            margin-top: 9px;
+            font-size: 19px;
+        
+        }
+        
+        .mobile {
+            display: flex;
+            margin-left: 500px;
+            margin-bottom: 10px;
+            background: #eeeeee;
+        
+        
+        }
+        
+        .mobile>h3 {
+            font-weight: 400;
+            font-family: arial;
+            background: #eeeeee;
+            margin-top: 9px;
+            font-size: 19px;
+        }
+        
+        .mobile>img {
+            height: 30px;
+            margin-top: 10px;
+        
+            background: #eeeeee;
+        
+        }
+        
+        #navi>h3 {
+            margin-left: 200px;
+            color: blue;
+            background: #eeeeee;
+            font-weight: 400;
+        
+        }
+        
+        #Everthing {
+            height: auto;
+            width: 1300px;
+        
+            background-color: white;
+            margin: auto;
+        
+        }
+        
+        .need {
+            height: auto;
+            background-color: white;
+        
+            margin: auto;
+            display: flex;
+        
+            width: 65%;
+        
+        
+        }
+        
+        .need>div {
+            background-color: white;
+        }
+        
+        .mid {
+             font-size: 17px;
+            color: #000;
+             padding: 0 0 4px ;
+            font-weight: 400;
+             margin-left: 25px;
+             margin-bottom: -15px;
+             margin-top: 14px;
+        }
+        
+        li {
+            text-align: left;
+            background-color: white;
+            color: gray;
+            list-style: none;
+        }
+        
+        ul {
+            background-color: white;
+        }
+        
+        
+            #h{
+                font-size: 21px;
+                font-weight: bold;
+                font-family: sans-serif;
+                text-align: center;
+                
+        
+            }
+        
